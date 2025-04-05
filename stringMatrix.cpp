@@ -1,29 +1,44 @@
-#include "stringMatrix.h"
 
+#include <iostream>
 #include <vector>
 
-stringMatrix stringMatrix::operator+ (const stringMatrix& other) {
-  for (int i = 0; i < other.elements.size(); i++) {
-    this->elements.at(i) += other.elements.at(i);
-  }
-  return *this;
+#include "stringMatrix.h"
+stringMatrix::stringMatrix() {
+
 }
 
-stringMatrix stringMatrix::operator- (const stringMatrix& other) {
-  for (int i = 0; i < other.elements.size(); i++) {
-    this->elements.at(i) -= other.elements.at(i);
+stringMatrix stringMatrix::operator+(const stringMatrix& other) const {
+  stringMatrix result;
+  result.elements.reserve(elements.size());
+  for (int i = 0; i < other.size(); i++) {
+    result.elements.push_back(this->elements.at(i) + other.elements.at(i));
   }
-  return *this;
+  return result;
 }
-stringMatrix stringMatrix::operator* (const int num) {
-  for (int i = 0; i < elements.size(); i++) {
-    this->elements.at(i) *= num;
+
+stringMatrix stringMatrix::operator-(const stringMatrix& other) const {
+  stringMatrix result;
+  result.elements.reserve(elements.size());
+  for (int i = 0; i < other.size(); i++) {
+    result.elements.push_back(this->elements.at(i) - other.elements.at(i));
   }
-  return *this;
+  return result;
 }
-stringMatrix stringMatrix::operator/ (const int num) {
-  for (int i = 0; i < elements.size(); i++) {
-    this->elements.at(i) /= num;
+
+stringMatrix stringMatrix::operator*(const double num) const {
+  stringMatrix result;
+  result.elements.reserve(elements.size());
+  for (int i = 0; i < size(); i++) {
+    result.elements.push_back(this->elements.at(i) * num);
   }
-  return *this;
+  return result;
+}
+
+stringMatrix stringMatrix::operator/(const double num) const {
+  stringMatrix result;
+  result.elements.reserve(elements.size());
+  for (int i = 0; i < size(); i++) {
+    result.elements.push_back(this->elements.at(i) / num);
+  }
+  return result;
 }

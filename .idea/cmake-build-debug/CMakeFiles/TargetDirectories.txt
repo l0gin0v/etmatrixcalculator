@@ -1,0 +1,3 @@
+/home/mloginoff/etmatrixcalculator/.idea/cmake-build-debug/CMakeFiles/_idea.dir
+/home/mloginoff/etmatrixcalculator/.idea/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mloginoff/etmatrixcalculator/.idea/cmake-build-debug/CMakeFiles/rebuild_cache.dir
