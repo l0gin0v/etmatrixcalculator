@@ -1,24 +1,17 @@
-//
 // Created by mloginoff on 4/5/25.
 //
-
-#ifndef STRINGMATRIX_H
-#define STRINGMATRIX_H
-#if defined_cplusplus
+#pragma once
+#include <vector>
 
 class stringMatrix {
 private:
-    vector<int> elements;
+    std::vector<int> elements;
 public:
-    StringMatrix();
-    ~StringMatrix();
+    stringMatrix();
 
-    StringMatrix operator + (const StringMatrix& other);
-    StringMatrix operator - (const StringMatrix& other);
-    StringMatrix operator * (const int num);
-    StringMatrix operator / (const int num);
+    stringMatrix operator+ (const stringMatrix& other);
+    stringMatrix operator- (const stringMatrix& other);
+    stringMatrix operator* (const int num);
+    stringMatrix operator/ (const int num);
 };
 
-
-#endif //defined_cplusplus
-#endif //STRINGMATRIX_H

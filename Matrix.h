@@ -9,16 +9,15 @@
 
 class Matrix {
 private:
-    vector<StringMatrix> lines;
-    int rows;
+    vector<stringMatrix> lines;
+    int cols;
 public:
     Matrix();
-    ~Matrix();
 
-    Matrix addition(StringMatrix a, StringMatrix b);
-    Matrix substraction(StringMatrix a, StringMatrix b);
-    Matrix multiplication(StringMatrix a, int num);
-    Matrix division(StringMatrix a, int num);
+    Matrix addition(stringMatrix a, stringMatrix b);
+    Matrix substraction(stringMatrix a, stringMatrix b);
+    Matrix multiplication(stringMatrix a, int num);
+    Matrix division(stringMatrix a, int num);
 };
 
 
